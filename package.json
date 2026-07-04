@@ -1,0 +1,13 @@
+{
+  "name": "e-commerce",
+  "private": true,
+  "scripts": {
+    "dev": "pnpm --filter @ecommerce/frontend dev",
+    "dev:backend": "pnpm --filter @ecommerce/backend dev",
+    "dev:all": "pnpm run --parallel dev:backend dev",
+    "build": "pnpm --filter @ecommerce/frontend build && pnpm --filter @ecommerce/backend build",
+    "lint": "pnpm -r lint",
+    "typecheck": "pnpm -r typecheck",
+    "clean": "pnpm -r exec rm -rf node_modules dist"
+  }
+}
